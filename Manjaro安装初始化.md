@@ -75,6 +75,8 @@ yaourt -S deepin-wine-tim
 
 4 钉钉
 
+[参考文章](https://looknews.cc/zh-my/keji/304229.html)
+
 5 docker
 ```
 # Pacman 安装 Docker
