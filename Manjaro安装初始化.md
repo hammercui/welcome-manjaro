@@ -1,5 +1,6 @@
  
 >Manjaro的安装使用过程，使用manjaro的18.1.5 stable版本
+>注意:所有的安装都不要在root用户下,在登录用户下即可
 
 ### 准备工作
 列出中国区镜像
@@ -26,11 +27,11 @@ sudo pacman-key --populate archlinuxcn
 ```
 更新软件包源
 ```
-sudo pacman -Sy
+sudo pacman -Syyu
 ```
-包管理：安装yaourt
+包管理：安装yay
 ```
-pacman -S yaourt
+pacman -S yay
 ```
 
 支持dep格式软件安装
@@ -39,7 +40,7 @@ step1、检查有没有安装 ``debtap
 
 sudo pacman -Q debtap
 
-没有就安装:yaourt -S debtap
+没有就安装:yay -S debtap
 
 step2、 升级debtap
 
@@ -75,6 +76,15 @@ sudo pacman -S winetricks
 打开wine的配置
 winecfg
 
+安装genmon工具，部分wine程序用到
+
+安装gnome-settings-daemon：sudo pacman -S gnome-settings-daemon
+
+设置gnome-settings-daemon自启动：
+sudo  cp  /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop   ~/.config/autostart
+
+sudo cp gsd-xsettings  ~/.config/autostart
+
 ```
 1 playonlinux
 
@@ -92,9 +102,14 @@ sudo pacman -S netease-cloud-music
 ```
 3 微信
 ```
-yaourt -S deepin-wine-wechat
-#tim
-yaourt -S deepin-wine-tim
+yay -S deepin-wine-wechat
+
+tim:
+
+yay -S deepin-wine-tim
+qq:
+
+
 ```
 
 4 钉钉
@@ -133,7 +148,7 @@ sudo pacman -S wine wine_gecko wine-mono
 8 deep-wine
 
 ```
-yaourt deepin-winemanjar
+yay deepin-wine
 ```
 
 9 webStorm
@@ -145,4 +160,14 @@ sudo snap install webstorm --classic
 
 ```
 sudo snap install phpstorm --classic
+```
+
+11 golang
+```
+sudo pacman -S go liteide
+vim ~/.profile
+# set go environment
+export GOROOT=/usr/lib/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/go
 ```
