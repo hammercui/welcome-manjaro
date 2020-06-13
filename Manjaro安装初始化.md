@@ -144,6 +144,11 @@ sudo systemctl enable docker
 ```
 软件商店或者命令行安装以下软件:
 strongswan,libnm,networkmanager-l2tp,网络管理器(提供图形化管理)
+
+安装完成后,重启网络管理
+sudo systemctl restart NetworkManager
+
+
 ```
 
 
@@ -173,4 +178,7 @@ export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/go
 ```
-12 迅雷
+12 v2ray
+
+```
+```
