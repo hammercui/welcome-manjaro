@@ -76,7 +76,8 @@ sudo pacman -S winetricks
 打开wine的配置
 winecfg
 
-安装genmon工具，部分wine程序用到
+安装genmon工具，部分wine程序用到:
+sudo pacman -S wine wine_gecko wine-mono
 
 安装gnome-settings-daemon：sudo pacman -S gnome-settings-daemon
 
@@ -140,10 +141,11 @@ sudo systemctl enable docker
 ```
 
 6 vpn
-
-
-sudo pacman -S wine wine_gecko wine-mono
 ```
+软件商店或者命令行安装以下软件:
+strongswan,libnm,networkmanager-l2tp,网络管理器(提供图形化管理)
+```
+
 
 8 deep-wine
 
@@ -171,3 +173,4 @@ export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/go
 ```
+12 迅雷
